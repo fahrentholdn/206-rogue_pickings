@@ -63,9 +63,10 @@ header h1 {
   margin: 0;
   padding: .5em 0;
   width: 100%;
-}
+  border-bottom: 5px solid #77a466;
+  }
 
-header h1 span {
+header span {
   color: #77a466;
 }
 
@@ -89,7 +90,7 @@ header nav ul li {
   text-transform: uppercase;
   font-weight: 700;
   font-size: .875em;
-  padding: 0 10px;
+  padding: 1em 0;
   display: inline;
   display: flex;
   flex-flow: row wrap;
@@ -151,6 +152,7 @@ header nav ul li a {
   border-top: 1px solid #eee;
 }
 
+.section-one h3,
 .section-two h3,
 .section-three h3 {
   padding: 10px 0;
@@ -170,7 +172,7 @@ header nav ul li a {
   color: #333;
   font-size: 1em;
   line-height: 21px;
-	padding-left: 0px;
+	padding-left: 0;
 }
 
 .address {
@@ -187,6 +189,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 footer span {
@@ -197,6 +200,15 @@ footer span {
 }
 
 @media (min-width: 768px) {
+  header h1 span {
+    color: #77a466;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
 	.bottom-section {
 		justify-content: space-between;
 		align-items: flex-start;
@@ -208,6 +220,14 @@ footer span {
 	.section-three {
 		border-top: none;
 		flex-basis: 30%;
+    height: auto;
+	}
+
+  .section-two,
+	.section-three {
+		border-left: 1px solid #eee;
+    padding-left: 20px;
+    padding-right: 10px;
 	}
 
 }
@@ -215,6 +235,7 @@ footer span {
 @media (min-width: 1200px) {
 	header {
 		justify-content: space-between;
+    padding: 10px 0;
 	}
 
 	header h1 {
@@ -230,6 +251,18 @@ footer span {
 
 	header nav ul {
 		display: flex;
-		justify-content: space-between;
+    justify-content: space-between;
+	}
+
+  header nav ul li {
+    padding: 0 1em;
+  }
+
+	.section-two,
+	.section-three {
+		border-left: 1px solid #eee;
+    padding-left: 20px;
+    padding-right: 20px;
+		flex-basis: 30%;
 	}
 }
